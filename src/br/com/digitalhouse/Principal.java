@@ -2,8 +2,16 @@ package br.com.digitalhouse;
 
 public class Principal {
     public static void main(String[] args) {
-        Aviao aviao = new Aviao("asa curvada", 80);
-        aviao.voar();
+        Pato pato = new Pato(20);
+        Aviao aviao = new Aviao(20);
+        SuperHomem superHomem = new SuperHomem(5);
+        TorreDeControle torreDeControle = new TorreDeControle();
+
+        torreDeControle.adicionarVoador(pato);
+        torreDeControle.adicionarVoador(aviao);
+        torreDeControle.adicionarVoador(superHomem);
+
+        torreDeControle.voemTodos();
 
     }
 }

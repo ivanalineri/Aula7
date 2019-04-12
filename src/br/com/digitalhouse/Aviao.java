@@ -1,28 +1,11 @@
 package br.com.digitalhouse;
 
 public class Aviao implements Voador {
-    private String tipoDeAsa;
-    private int qtdAssentos;
 
-    public String getTipoDeAsa() {
-        return tipoDeAsa;
-    }
+    public float horasDeVoo;
 
-    public void setTipoDeAsa(String tipoAsa) {
-        tipoDeAsa = tipoAsa;
-    }
-
-    public int getQtdAssentos() {
-        return qtdAssentos;
-    }
-
-    public void setQtdAssentos(int qtd) {
-        qtdAssentos = qtd;
-    }
-
-    public Aviao(String asa, int qtdDeAssentos) {
-        tipoDeAsa = asa;
-        qtdAssentos = qtdDeAssentos;
+    public Aviao(float horasDeVoo) {
+        this.horasDeVoo = horasDeVoo;
     }
 
     public Aviao() {
@@ -31,7 +14,7 @@ public class Aviao implements Voador {
 
     @Override
     public void voar() {
-        System.out.println("Voando como uma galinha!!!");
+        System.out.println((horasDeVoo + 13) + "Voando como uma galinha!!!");
 
     }
 }
